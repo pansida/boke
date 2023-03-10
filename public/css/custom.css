@@ -1,0 +1,60 @@
+/* bilibli番剧插件 */
+#article-container .bangumi-tab.bangumi-active {
+    background: var(--anzhiyu-theme);
+    color: var(--anzhiyu-ahoverbg);
+    border-radius: 10px;
+  }
+  a.bangumi-tab:hover {
+    text-decoration: none !important;
+  }
+  .bangumi-button:hover {
+    background: var(--anzhiyu-theme) !important;
+    border-radius: 10px !important;
+    color: var(--anzhiyu-ahoverbg) !important;
+  }
+  a.bangumi-button.bangumi-nextpage:hover {
+    text-decoration: none !important;
+  }
+  .bangumi-button {
+    padding: 5px 10px !important;
+  }
+  
+  a.bangumi-tab {
+    padding: 5px 10px !important;
+  }
+  svg.icon.faa-tada {
+    font-size: 1.1em;
+  }
+  .bangumi-info-item {
+    border-right: 1px solid #f2b94b;
+  }
+  .bangumi-info-item span {
+    color: #f2b94b;
+  }
+  .bangumi-info-item em {
+    color: #f2b94b;
+  }
+
+/* 音乐播放器 */
+
+/* .aplayer .aplayer-lrc {
+  display: none !important;
+} */
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    border: 1px solid transparent !important;
+    border-radius: 100px !important;
+    left: -66px !important;
+    transition: all 0.3s;
+    /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+  }
+  
+  .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left: 0 !important;
+    transition: all 0.3s;
+    /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+  }
+  
+  .aplayer.aplayer-fixed {
+    z-index: 999999 !important;
+  }

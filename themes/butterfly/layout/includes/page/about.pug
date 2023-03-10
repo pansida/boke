@@ -1,0 +1,363 @@
+#about-page
+  .author-box
+    .author-img
+      img.no-lightbox(src='https://www.pansida.cn/img/avatar.jpg')
+    .image-dot
+  p.p.center.logo.large 关于我
+  p.p.center.small 生活明朗，万物可爱✨
+  .author-content
+    .author-content-item.myInfoAndSayHello
+      .title1 你好，很高兴认识你👋
+      .title2
+        | 我叫
+        span.inline-word 潘斯达
+      .title1
+        | 是一名 前端CV工程师、学生
+        span.inline-word 博主
+    .aboutsiteTips.author-content-item
+      .author-content-item-tips 追求
+      h2
+        | 源于
+        br
+        | 热爱而去
+        span.inline-word 感受
+        .mask
+          span.first-tips 学习
+          |
+          span 生活
+          |
+          span(data-up) 程序
+          |
+          span(data-show) 体验
+
+  .hello-about
+    .cursor(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+    .shapes
+      .shape.shape-1(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+      .shape.shape-2(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+      .shape.shape-3(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+    .content
+      h1 This My About!
+
+  .author-content
+    .author-content-item.skills
+      .card-content
+        .author-content-item-tips 技能
+        span.author-content-item-title 开启创造力
+        .skills-style-group
+          .tags-group-all
+            .tags-group-wrapper
+              each i in site.data.creativity
+                - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                each item, index in i.creativity_list
+                  if ((index+1 <= evenNum.length) && (index+1 <= oddNum.length))
+                    .tags-group-icon-pair
+                      .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                        img.no-lightbox(title=evenNum[index].name, src=evenNum[index].icon)
+                      .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                        img.no-lightbox(title=oddNum[index].name, src=oddNum[index].icon)
+          .skills-list
+            each i in site.data.creativity
+              each item, index in i.creativity_list
+                .skill-info
+                  .skill-icon(style=`background: ${item.color}`)
+                    img.no-lightbox(title=item.name, src=item.icon)
+                  .skill-name
+                    span=item.name
+            .etc ...
+    .author-content-item.careers
+      .card-content
+        .author-content-item-tips 生涯
+        span.author-content-item-title 无限进步
+        .careers-group
+          .careers-item
+            .circle(style='background:#357ef5')
+            .name 前端---计算机科学与技术专业
+        img.author-content-img.no-lightbox(alt='生涯', src='https://pansida.cn/img/xiantiao.png')
+
+  .author-content
+    .about-statistic.author-content-item
+      .card-content
+        .author-content-item-tips 数据
+        span.author-content-item-title 访问统计
+        #statistic
+        .post-tips
+          | 统计信息来自
+          a(href='https://invite.51.la/251750?target=V6', target='_blank', rel='noopener nofollow') 51la网站统计
+        .banner-button-group
+          a.banner-button(onclick='pjax.loadUrl("/archives/")', data-pjax-state)
+            i.fas.fa-circle-arrow-up-right
+            |
+            span.banner-button-text 文章隧道
+    .author-content-item-group.column.mapAndInfo
+      .author-content-item.map.single
+        span.map-title
+          | 我现在住在
+          b 中国，武汉市
+      .author-content-item.selfInfo.single
+        div
+          span.selfInfo-title 生于
+          |
+          span.selfInfo-content#selfInfo-content-year(style='color:#43a6c6') 2001
+        div
+          span.selfInfo-title 汉口学院
+          |
+          span.selfInfo-content(style='color:#c69043') 计算机科学与技术
+        div
+          span.selfInfo-title 现在职业
+          |
+          span.selfInfo-content(style='color:#b04fe6') 大三学生👨‍🎓
+
+  .author-content
+    .author-content-item.personalities
+      .author-content-item-tips 性格
+      span.author-content-item-title 执政官
+      .title2(style='color:#ac899c') ESFJ-A
+      .post-tips
+        | 在
+        a(href='https://www.16personalities.com/', target='_blank', rel='noopener nofollow') 16personalities
+        |  了解更多关于
+        a(target='_blank', rel='noopener external nofollow', href='https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC') 执政官
+      .image
+        img.no-lightbox(src='https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg')
+    .author-content-item.myphoto
+      img.author-content-img.no-lightbox(alt='黄昏', src='https://www.pansida.cn/img/Peach_blossom.jpg')
+
+  .author-content
+    .author-content-item.maxim
+      .author-content-item-tips 座右铭
+      span.maxim-title
+        span(style='opacity:.6;margin-bottom:8px') 生活明朗，
+        |
+        span 万物可爱。
+    .author-content-item.buff
+      .card-content
+        .author-content-item-tips 特长
+        span.buff-title
+          span(style='opacity:.6;margin-bottom:8px')
+            | 喜欢追剧的
+            span.inline-word 网络患者
+          |
+          span
+            | 偷懒指数
+            span.inline-word MAX
+      .card-background-icon
+        i.fas.fa-dice-d20
+
+  .author-content
+    .author-content-item.game-yuanshen
+      .card-content
+        .author-content-item-tips 爱好追剧
+        span.author-content-item-title 电视剧
+        //- .content-bottom
+        //-   .icon-group
+        //-     .loading-bar(role='presentation', aria-hidden='true')
+        //-       img.no-lightbox(src='https://www.pansida.cn/img/zhuiju1.png')
+    .author-content-item.comic-content
+      .card-content
+        .author-content-item-tips 爱好影视
+        span.author-content-item-title 让子弹飞
+        .content-bottom
+          .banner-button-group
+            a.banner-button(onclick='window.open("https://www.bilibili.com/bangumi/play/ss12548?theme=movie&spm_id_from=333.337.0.0")', data-pjax-state)
+              i.fas.fa-circle-arrow-up-right
+              |
+              span.banner-button-text 立即追番
+
+  .author-content
+    .author-content-item.like-technology
+      .card-content
+        .author-content-item-tips 关注偏好
+        span.author-content-item-title B站Up主
+        .content-bottom
+          .tips 小片片、二棉裤
+    .author-content-item.like-music
+      .card-content
+        .author-content-item-tips 音乐偏好
+        span.author-content-item-title 胡歌、老歌、
+        |
+        span.author-content-item-title 华语流行
+        .content-bottom
+          .tips 跟 litePan 一起欣赏更多音乐
+        .banner-button-group
+          a.banner-button(onclick='pjax.loadUrl("/music/")', data-pjax-state)
+            i.fas.fa-circle-arrow-up-right
+            |
+            span.banner-button-text 更多推荐
+
+  .author-content
+    .create-site-post.author-content-item.single
+      .author-content-item-tips 心路历程
+      | 欢迎来到我的博客 😝，这里是我记笔记的地方 🙌，目前就读于武汉
+      strong 汉口学院
+      | 的
+      strong 计算机科学与技术
+      | 专业，经常追剧和沉淀学习我的前端知识，有时候会在博客里面进行添加修改我的文章，我最喜欢的两句诗就是
+      strong 长风破浪会有是，直挂云帆济沧海
+      |  相信我的不懈努力的学习终究有一天也会成为小佬🐷！
+      .checkbox.blue.checked
+        input(type='checkbox', checked)
+        p
+          | 又菜又爱玩🎮
+          kbd ctrl
+          |  +
+          kbd C
+          | 、
+          kbd ctrl
+          |  +
+          kbd V
+          | 高级CV工程师🏆
+      .checkbox.times.red.checked
+        input(type='checkbox', checked)
+        p 擅长PS、VSCode、MySQL、MongoDb等软件的安装与卸载🎃
+      .checkbox.times.red.checked
+        input(type='checkbox', checked)
+        p 精通Html、CSS、JavaScript、Vue、React、PHP、Java、Python、C、C++、C#、Go、TypeScript等单词的拼写🎲
+      .checkbox.times.red.checked
+        input(type='checkbox', checked)
+        p 熟悉Windows、Linux、Mac、Android、IOS等系统的开关机👻
+      span.p.h3 todoList
+      .checkbox.checked
+        input(type='checkbox', checked)
+        p 原生微信小程序
+      .checkbox.checked
+        input(type='checkbox', checked)
+        p vue2、vue3
+      .checkbox.checked
+        input(type='checkbox', checked)
+        p 重装文档重写
+      .checkbox
+        input(type='checkbox')
+        p NodeJS
+      .checkbox
+        input(type='checkbox')
+        p threeJS
+      .checkbox.Nuxt
+        input(type='checkbox')
+        p Next
+      .checkbox
+        input(type='checkbox')
+        p TypeScript
+      .checkbox
+        input(type='checkbox')
+        p 智慧城市大前端
+      .checkbox
+        input(type='checkbox')
+        p 工业企业生产管理
+      .checkbox
+        input(type='checkbox')
+        p 语言的魅力
+
+script(src=url_for(theme.CDN.option.countup_js))
+script(src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js")
+script.
+  (() => {
+    function isInViewPortOfOne(el) {
+      if (!el) return;
+      const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      const offsetTop = el.offsetTop;
+      const scrollTop = document.documentElement.scrollTop;
+      const top = offsetTop - scrollTop;
+      return top <= viewPortHeight;
+    }
+    fetch('https://v6-widget.51.la/v6/Jzl3n87UCWzidD4y/quote.js').then(res => res.text()).then((data) => {
+        let title = ['最近活跃', '今日人数', '今日访问', '昨日人数', '昨日访问', '本月访问', '总访问量']
+        let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g)
+
+        num = num.map((el) => {
+          let val = el.replace(/(<\/span><span>)/g, '')
+          let str = val.replace(/(<\/span><\/p>)/g, '')
+          return str
+        })
+
+        let statisticEl = document.getElementById('statistic')
+
+        // 自定义不显示哪个或者显示哪个，如下为不显示 最近活跃访客 和 总访问量
+        let statistic = []
+        for (let i = 0; i < num.length; i++) {
+            if (!statisticEl) return
+            if (i == 0 || i == num.length - 1) continue;
+            statisticEl.innerHTML += '<div><span>' + title[i] + '</span><span id='+ title[i] + '>' + num[i] + '</span></div>'
+            queueMicrotask(()=> {
+              statistic.push(new CountUp(title[i], 0, num[i], 0, 2, {
+                  useEasing: true,
+                  useGrouping: true,
+                  separator: ',',
+                  decimal: '.',
+                  prefix: '',
+                  suffix: ''
+              }))
+            })
+        }
+
+        function statisticUP () {
+          let statisticElment = document.querySelector('.about-statistic.author-content-item');
+          if(isInViewPortOfOne(statisticElment)) {
+            for (let i = 0; i < num.length; i++) {
+              if (i == 0 || i == num.length - 1) continue;
+              statistic[i-1].start();
+            }
+            document.removeEventListener('scroll', throttleStatisticUP);
+          }
+        }
+
+        const selfInfoContentYear = new CountUp('selfInfo-content-year', 0, 2001, 0, 2, {
+          useEasing: true,
+          useGrouping: false,
+          separator: ',',
+          decimal: '.',
+          prefix: '',
+          suffix: ''
+        })
+
+        function scrollSelfInfoContentYear() {
+          let selfInfoContentYearElment = document.querySelector('.author-content-item.selfInfo.single');
+          if (selfInfoContentYearElment && isInViewPortOfOne(selfInfoContentYearElment)) {
+            selfInfoContentYear.start()
+            document.removeEventListener('scroll', throttleScrollSelfInfoContentYear);
+          }
+        }
+        const throttleStatisticUP = btf.throttle(statisticUP, 200)
+        document.addEventListener('scroll', throttleStatisticUP, {passive: true})
+
+        const throttleScrollSelfInfoContentYear = btf.throttle(scrollSelfInfoContentYear, 200)
+        document.addEventListener('scroll', throttleScrollSelfInfoContentYear, {passive: true})
+    });
+
+    var pursuitInterval = null;
+      pursuitInterval = setInterval(function () {
+        const show = document.querySelector('span[data-show]')
+        const next = show.nextElementSibling || document.querySelector('.first-tips')
+        const up = document.querySelector('span[data-up]')
+
+        if (up) {
+          up.removeAttribute('data-up')
+        }
+
+        show.removeAttribute('data-show')
+        show.setAttribute('data-up', '')
+
+        next.setAttribute('data-show', '')
+      }, 2000)
+
+      document.addEventListener('pjax:send', function(){
+        clearInterval(pursuitInterval);
+      });
+
+      var helloAboutEl = document.querySelector('.hello-about')
+      helloAboutEl.addEventListener("mousemove", evt => {
+        const mouseX = evt.offsetX;
+        const mouseY = evt.offsetY;
+        gsap.set(".cursor", {
+          x: mouseX,
+          y: mouseY,
+        })
+
+        gsap.to(".shape", {
+          x: mouseX,
+          y: mouseY,
+          stagger: -0.1
+        })
+      })
+  })()
