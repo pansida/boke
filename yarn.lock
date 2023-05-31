@@ -1919,10 +1919,10 @@ ee-first@1.1.1:
   resolved "https://registry.npmmirror.com/ee-first/-/ee-first-1.1.1.tgz"
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
-ejs@3.1.8:
-  version "3.1.8"
-  resolved "https://mirrors.cloud.tencent.com/npm/ejs/-/ejs-3.1.8.tgz"
-  integrity sha512-/sXZeMlhS0ArkfX2Aw780gJzXSMPnKjtspYZv+f3NiKLlubezAHDU5+9xz6gd3/NhG3txQCo6xlglmTS+oTGEQ==
+ejs@3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.9.tgz#03c9e8777fe12686a9effcef22303ca3d8eeb361"
+  integrity sha512-rC+QVNMJWv+MtPgkt0y+0rVEIdbtxVADApW9JXrUVlzHetgcyczP/E7DJmWJ4fJCZF2cPcBk0laWO9ZHMG3DmQ==
   dependencies:
     jake "^10.8.5"
 
@@ -2700,16 +2700,16 @@ hexo-admin@2.3.0:
     serve-static "^1.4.0"
     write-good "^0.10.0"
 
-hexo-bilibili-bangumi@^1.8.5:
-  version "1.8.5"
-  resolved "https://mirrors.cloud.tencent.com/npm/hexo-bilibili-bangumi/-/hexo-bilibili-bangumi-1.8.5.tgz"
-  integrity sha512-W/5Xkqtx2PuJOtV2revwwFj6/BeXNAouzea+jnGW89gze+f1U9hmCKdSLSR7kWxJmF93uSI+/ybcTOD3M7clig==
+hexo-bilibili-bangumi@^1.8.7:
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/hexo-bilibili-bangumi/-/hexo-bilibili-bangumi-1.8.7.tgz#37f8e6c1800e8ac8e492d601766460977066583b"
+  integrity sha512-SSVJ+3AjAEw1bxwRhxU32RJ14ksfQmgqp27vrYrpX6AysiepXS+zjawsw14VmsGDLpWrFEBDmUGDCmpFRYzH0A==
   dependencies:
     "@babel/runtime" "^7.18.0"
     axios "^1.0.0"
     bangumi-data "^0.3.91"
     cheerio "^1.0.0-rc.11"
-    ejs "3.1.8"
+    ejs "3.1.9"
     hexo-fs "^4.0.0"
     hexo-i18n "^2.0.0"
     hexo-log "^4.0.1"
